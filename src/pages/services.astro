@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+import ServiceCard from '../components/ServiceCard.astro';
+
+const services = [
+  {
+    id: 1,
+    title: "Cámaras HD 4K",
+    description: "Cámaras de última generación con resolución 4K para capturar cada detalle, de día o de noche, con visión nocturna avanzada y resistencia a condiciones climáticas extremas.",
+    features: [
+      "Resolución 4K Ultra HD",
+      "Visión nocturna hasta 30 metros",
+      "Resistencia IP66 (agua y polvo)",
+      "Almacenamiento en la nube o local"
+    ],
+    image: "/1.jpg"
+  },
+  {
+    id: 2,
+    title: "Vigilancia Inteligente con IA",
+    description: "Nuestro sistema detecta movimientos sospechosos, rostros no autorizados y patrones anómalos en tiempo real, enviándote alertas inteligentes solo cuando realmente importan.",
+    features: [
+      "Detección de intrusos con IA",
+      "Reconocimiento facial opcional",
+      "Alertas por app o SMS",
+      "Reducción del 95% en falsas alarmas"
+    ],
+    image: "/2.jpg"
+  },
+  {
+    id: 3,
+    title: "App Móvil de Monitoreo",
+    description: "Controla tu sistema de seguridad desde cualquier lugar del mundo. Recibe notificaciones, revisa grabaciones en vivo y habla a través de las cámaras con audio bidireccional.",
+    features: [
+      "Acceso en tiempo real",
+      "Grabaciones en la nube",
+      "Audio bidireccional",
+      "Compatible con iOS y Android"
+    ],
+    image: "/3.jpg"
+  },
+  {
+    id: 4,
+    title: "Seguridad con Encriptación Militar",
+    description: "Tus datos están protegidos con los mismos estándares que usan gobiernos y fuerzas armadas. Nadie más puede acceder a tus cámaras ni a tus grabaciones.",
+    features: [
+      "Encriptación AES-256",
+      "Autenticación de dos factores",
+      "Sin acceso remoto no autorizado",
+      "Cumple con estándares internacionales"
+    ],
+    image: "/1.jpg"
+  }
+];
+---
+---
+
+<Layout title='Services'>
+   <section class="py-20 bg-[#f6f6f6] text-[#333333] text-center">
+        <div class="max-w-3xl mx-auto px-4">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">Nuestros Servicios</h1>
+          <p class="text-xl opacity-90">
+            Tecnología avanzada, instalación profesional y soporte de por vida.
+          </p>
+        </div>
+      </section>
+
+      <!-- Cards de servicios -->
+      {services.map((service, index) => (
+        <ServiceCard
+          image={service.image}
+          title={service.title}
+          description={service.description}
+          features={service.features}
+          reverse={index % 2 === 1}
+        />
+      ))}
+</Layout>

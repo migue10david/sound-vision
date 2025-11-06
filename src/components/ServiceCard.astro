@@ -1,0 +1,54 @@
+---
+interface Props {
+  image: string;
+  title: string;
+  description: string;
+  features?: string[];
+  reverse?: boolean; // para alternar el layout en cada card
+}
+
+const { image, title, description, features = [], reverse = false } = Astro.props;
+---
+
+<div class="py-8 md:py-10 ">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class={`grid md:grid-cols-2 gap-8 items-center ${reverse ? 'md:flex-row-reverse' : ''}`}>
+      <!-- Imagen -->
+      <div class="rounded-2xl overflow-hidden shadow-lg">
+        <img
+          src={image}
+          alt={title}
+          class="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+          loading="lazy"
+        />
+      </div>
+
+      <!-- Contenido -->
+      <div class="space-y-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#333333]">{title}</h2>
+        <p class="text-lg text-[#333333] opacity-90 leading-relaxed">{description}</p>
+
+        {features.length > 0 && (
+          <ul class="space-y-3">
+            {features.map((feature) => (
+              <li class="flex items-start">
+                <span class="text-[#990100] mr-2">✓</span>
+                <span class="text-[#333333]">{feature}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        <div>
+          <a
+            href="/contact"
+            class="inline-block bg-[#990100] hover:bg-[#b90504] text-white font-medium py-3 px-6 rounded-lg transition-colors shadow-md hover:shadow-lg"
+          >
+            Solicitar servicio
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="h-[0.1px] bg-black w-full mt-4"></div> -->
+  </div>
+</div>
