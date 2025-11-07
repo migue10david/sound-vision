@@ -1,76 +1,37 @@
 ---
-import { Camera, Eye, Smartphone, Lock, Zap, Users } from "lucide-react"
+import ServiceContent from "./ServiceContent.astro";
+import { services } from "@/lib/mocketContent";
 
-  const services = [
-    {
-      id: 1,
-      icon: Camera,
-      title: "Cámaras HD 4K",
-      description: "Cámaras de última generación con resolución 4K para capturar cada detalle",
-    },
-    {
-      id: 2,
-      icon: Eye,
-      title: "Vigilancia Inteligente",
-      description: "Tecnología IA que detecta automáticamente comportamientos sospechosos",
-    },
-    {
-      id: 3,
-      icon: Smartphone,
-      title: "App Móvil",
-      description: "Acceso en tiempo real a tus cámaras desde cualquier dispositivo",
-    },
-    {
-      id: 4,
-      icon: Lock,
-      title: "Encriptación",
-      description: "Datos protegidos con encriptación de grado militar",
-    },
-    {
-      id: 5,
-      icon: Zap,
-      title: "Instalación Rápida",
-      description: "Configuración e instalación profesional en 24 horas",
-    },
-    {
-      id: 6,
-      icon: Users,
-      title: "Soporte 24/7",
-      description: "Equipo de soporte técnico disponible en cualquier momento",
-    },
-  ]
 ---
-    <section id="services" class="py-4 md:py-10 bg-[#f6f6f6]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold text-[#333333] mb-4">
-            Nuestros Servicios
-          </h2>
-          <p class="text-xl text-[#333333] max-w-2xl mx-auto">
-            Soluciones completas de seguridad para proteger lo que más importa
-          </p>
-        </div>
+<h1 class="text-3xl md:text-4xl font-bold mb-6 text-center mt-4 text-[#333333]">Our Services</h1>
+<div class="grid grid-cols-1 gap-4 px-2 py-4 lg:grid-cols-7 lg:grid-rows-8 lg:gap-1">
+  <!-- Servicio 1 -->
+  <div class="lg:col-span-3 lg:row-span-5">
+    <ServiceContent service={services[0]} />
+  </div>
+  
+  <!-- Servicio 2 -->
+  <div class="lg:col-span-4 lg:row-span-3 lg:col-start-1 lg:row-start-6">
+    <ServiceContent service={services[1]} />
+  </div>
+  
+  <!-- Servicio 3 -->
+  <div class="lg:col-span-2 lg:row-span-5 lg:col-start-4 lg:row-start-1">
+    <ServiceContent service={services[2]} />
+  </div>
+  
+  <!-- Servicio 4 -->
+  <div class="lg:col-span-2 lg:row-span-5 lg:col-start-6 lg:row-start-1">
+    <ServiceContent service={services[3]} />
+  </div>
+  
+  <!-- Servicio 5 -->
+  <div class="lg:col-span-3 lg:row-span-3 lg:col-start-5 lg:row-start-6">
+    <ServiceContent service={services[4]} />
+  </div>
+</div>
 
-        {/* Services Grid */}
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => {
-            const Icon = service.icon;
-            return (
-              <div
-                class="group bg-white p-8 rounded-xl border border-[#e8e8e8] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-              >
-                <h3 class="text-xl font-bold text-[#333333] mb-3">{service.title}</h3>
-                <p class="text-[#333333] opacity-80 leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* CTA Section (descomentada y mejorada) */}
-        <div class="mt-20 rounded-2xl p-8 md:p-12 bg-gradient-to-r from-[#333333] to-[#444444] text-center">
+<!-- <div class="mt-20 rounded-2xl p-8 md:p-12 bg-gradient-to-r from-[#333333] to-[#444444] text-center">
           <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">
             ¿Listo para asegurar tu hogar o negocio?
           </h3>
@@ -81,6 +42,4 @@ import { Camera, Eye, Smartphone, Lock, Zap, Users } from "lucide-react"
             Agendar Consulta
           </button>
         </div>
-      </div>
-    </section>
-
+      </div> -->

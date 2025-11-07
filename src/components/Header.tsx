@@ -22,12 +22,12 @@ const Header = () => {
 
   return (
     <header className={`bg-[#333333] text-white shadow-lg sticky top-0 z-50`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-2">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="/" className="text-2xl font-bold tracking-wider">
-              Tu Logo
+              <img src="/sound.jpg" alt="Miguelito Logo" className="h-16 w-auto" />
             </a>
           </div>
 

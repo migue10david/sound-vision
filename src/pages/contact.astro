@@ -1,0 +1,159 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import "../styles/global.css";
+---
+
+<Layout title="Contacto">
+  <div class="min-h-screen bg-background">
+    <div class="bg-[#f6f6f6]">
+        <div class="text-center mb-16 py-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-[#333333]">Contact Us</h1>
+        <p class="text-[#333333] mt-4 max-w-2xl mx-auto">
+            Have questions or want to learn more about our services? We're here to help!
+        </p>
+      </div>
+    </div>
+    <div class="container mx-auto px-4 max-w-7xl">
+      <!-- Título centrado -->
+      
+
+      <!-- Grid: Formulario | Contacto + Mapa -->
+      <div class="flex flex-col md:flex-row justify-between gap-12 py-8">
+        <!-- 📝 Formulario de contacto -->
+        <div class="bg-card p-8 rounded-xl border shadow-sm w-full">
+          <h2 class="text-2xl font-bold text-card-foreground mb-6">Envíanos un mensaje</h2>
+          <form class="space-y-5" action="#" method="POST">
+            <div>
+              <label for="name" class="block text-sm font-medium text-card-foreground mb-1">Nombre</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                placeholder="Tu nombre"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-card-foreground mb-1">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                placeholder="tu@email.com"
+              />
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-card-foreground mb-1">Mensaje</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows="5"
+                class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors">
+              Enviar mensaje
+            </button>
+          </form>
+        </div>
+
+        <!-- 📍 Información + Redes + Mapa -->
+        <div class="space-y-8 w-full">
+          <!-- Información de contacto y redes -->
+          <div class="bg-card p-8 rounded-xl border shadow-sm">
+            <h2 class="text-2xl font-bold text-card-foreground mb-5">Información de contacto</h2>
+
+            <div class="space-y-5">
+              <div class="flex items-start gap-4">
+                <div class="mt-1 p-2 bg-primary/10 rounded-lg">
+                  <Phone className="text-primary size-5" />
+                </div>
+                <div>
+                  <h3 class="font-semibold text-card-foreground">Teléfono</h3>
+                  <a href="tel:+34900000000" class="text-muted-foreground hover:text-primary">
+                    +34 900 000 000
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="mt-1 p-2 bg-primary/10 rounded-lg">
+                  <Mail className="text-primary size-5" />
+                </div>
+                <div>
+                  <h3 class="font-semibold text-card-foreground">Email</h3>
+                  <a href="mailto:info@security.com" class="text-muted-foreground hover:text-primary">
+                    info@security.com
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="mt-1 p-2 bg-primary/10 rounded-lg">
+                  <MapPin className="text-primary size-5" />
+                </div>
+                <div>
+                  <h3 class="font-semibold text-card-foreground">Dirección</h3>
+                  <p class="text-muted-foreground">
+                    Calle Principal 123<br />
+                    28001 Madrid, España
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="mt-8 pt-6 border-t border-border">
+              <h3 class="font-semibold text-card-foreground mb-4">Síguenos</h3>
+              <div class="flex gap-4">
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  class="p-2.5 bg-primary/10 rounded-lg hover:bg-primary/20 transition-colors">
+                  <Facebook className="size-5 text-primary" />
+                </a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  class="p-2.5 bg-primary/10 rounded-lg hover:bg-primary/20 transition-colors">
+                  <Instagram className="size-5 text-primary" />
+                </a>
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  class="p-2.5 bg-primary/10 rounded-lg hover:bg-primary/20 transition-colors">
+                  <Linkedin className="size-5 text-primary" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mapa de Google -->
+          <div class="bg-card rounded-xl border overflow-hidden shadow-sm h-80">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.265098174949!2d-3.7037901999999995!3d40.4167754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sPuerta%20del%20Sol!5e0!3m2!1ses!2ses!4v1234567890"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              loading="lazy"
+              allowfullscreen
+              aria-hidden="true"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

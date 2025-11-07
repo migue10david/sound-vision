@@ -1,0 +1,37 @@
+---
+type Props = {
+  service: {
+    title: string;
+    description: string;
+    image: string; // Ruta de la imagen (ej. "/images/service1.jpg")
+  };
+};
+
+const { service } = Astro.props;
+---
+
+<div 
+  class="h-full w-full p-6 border border-gray-200 flex flex-col bg-cover bg-center bg-no-repeat"
+  style={`background-image: url('${service.image}');`}
+>
+  <!-- Capa de oscurecimiento sutil para mejor legibilidad -->
+  <div class="h-full w-full bg-black/10  flex flex-col p-5 justify-center items-center gap-4">
+    <h3 class="text-2xl font-bold text-white mb-3 drop-shadow-md">{service.title}</h3>
+    
+    <!-- Descripción truncada a 3 líneas -->
+    <p 
+      class="text-gray-100 text-xl leading-relaxed  overflow-hidden line-clamp-4 font-bold"
+      style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;"
+    >
+      {service.description}
+    </p>
+
+    <!-- Botón View More -->
+    <a 
+      href="/services"
+      class="mt-4 buttonServices"
+    >
+      View More
+    </a>
+  </div>
+</div>
