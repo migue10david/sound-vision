@@ -1,0 +1,29 @@
+<a
+  id="floating-call-button"
+  href="tel:+13056842185"
+  class="fixed bottom-0 text-center left-1/2 w-full transform -translate-x-1/2 px-6 py-3 bg-black text-white font-medium md:hidden shadow-lg  invisible transition-all duration-300"
+>
+  Call Us
+</a>
+
+<script>
+  // Mostrar el botón solo después de scrollear 100px
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('floating-call-button');
+    if (!button) return;
+
+    const handleScroll = () => {
+      if (window.scrollY > 2800) {
+        button.classList.remove('opacity-0', 'invisible');
+        button.classList.add('opacity-100', 'visible');
+      } else {
+        button.classList.remove('opacity-100', 'visible');
+        button.classList.add('opacity-0', 'invisible');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    // Ejecutar al cargar por si ya hay scroll (p. ej., navegación con back)
+    handleScroll();
+  });
+</script>
