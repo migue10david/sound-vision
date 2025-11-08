@@ -10,21 +10,18 @@ export default function Hero() {
   const slides = [
     {
       id: 1,
-      title: "Vigilancia 24/7",
-      subtitle: "Protección constante para tu negocio",
-      image: "/1.jpg",
+      title: "Home Audio Video & Integration",
+      image: "/home-theater.webp",
     },
     {
       id: 2,
-      title: "Tecnología IA Avanzada",
-      subtitle: "Detección inteligente de amenazas",
-      image: "/2.jpg",
+      title: "Smart Home Control System",
+      image: "/smart-home.webp",
     },
     {
       id: 3,
-      title: "Acceso Remoto",
-      subtitle: "Controla tu seguridad desde cualquier lugar",
-      image: "/3.jpg",
+      title: "Surveillance",
+      image: "/Surveillance.jpg",
     },
   ]
 
@@ -39,7 +36,7 @@ export default function Hero() {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
 
   return (
-    <section id="hero" className="relative w-full h-2/3 md:h-3/4 overflow-hidden">
+    <section id="hero" className="relative w-full h-1/3 md:h-3/4 overflow-hidden">
       {/* Carousel */}
       <div className="relative w-full h-full">
         {slides.map((slide, index) => (
@@ -49,7 +46,7 @@ export default function Hero() {
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           >
-            <img src={slide.image || "/placeholder.svg"} alt={slide.title} className="w-full h-full object-cover" />
+            <img src={slide.image || "/placeholder.svg"} alt={slide.title} className="w-full h-full object-center" />
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/50" />
           </div>
@@ -59,12 +56,8 @@ export default function Hero() {
       {/* Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
         <div className="flex items-center gap-3 mb-6">
-          <h1 className="text-5xl md:text-6xl font-bold text-white text-balance">{slides[currentSlide].title}</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-white text-balance">{slides[currentSlide].title}</h1>
         </div>
-        <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl text-balance">{slides[currentSlide].subtitle}</p>
-        <button className="bg-[#990100] hover:bg-[#b90504] px-6 py-3 rounded-lg text-white font-medium transition-colors shadow-lg hover:shadow-red-500/20">
-            Contactar Ahora
-          </button>
       </div>
 
       {/* Navigation Buttons */}

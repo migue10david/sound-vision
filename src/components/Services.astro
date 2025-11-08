@@ -3,30 +3,34 @@ import ServiceContent from "./ServiceContent.astro";
 import { services } from "@/lib/mocketContent";
 
 ---
-<h1 class="text-3xl md:text-4xl font-bold mb-6 text-center mt-4 text-[#333333]">Our Services</h1>
-<div class="grid grid-cols-1 gap-4 px-2 py-4 lg:grid-cols-7 lg:grid-rows-8 lg:gap-1">
+<div class="bg-[#f6f6f6]">
+
+  <h1 class="text-3xl md:text-4xl font-bold py-4 text-center  text-[#333333] ">Our Services</h1>
+</div>
+
+<div class="grid grid-cols-1 gap-4 px-2 py-4 lg:grid-cols-7 lg:grid-rows-10 lg:gap-2 h-[2500px] lg:h-[1217px] bg-[#f6f6f6]">
   <!-- Servicio 1 -->
-  <div class="lg:col-span-3 lg:row-span-5">
+  <div class="lg:col-span-3 lg:row-span-5 ">
     <ServiceContent service={services[0]} />
   </div>
   
   <!-- Servicio 2 -->
-  <div class="lg:col-span-4 lg:row-span-3 lg:col-start-1 lg:row-start-6">
+  <div class="lg:col-span-4 lg:row-span-5 lg:col-start-1 lg:row-start-6  ">
     <ServiceContent service={services[1]} />
   </div>
   
   <!-- Servicio 3 -->
-  <div class="lg:col-span-2 lg:row-span-5 lg:col-start-4 lg:row-start-1">
+  <div class="lg:col-span-2 lg:row-span-5 lg:col-start-4 lg:row-start-1 ">
     <ServiceContent service={services[2]} />
   </div>
   
   <!-- Servicio 4 -->
-  <div class="lg:col-span-2 lg:row-span-5 lg:col-start-6 lg:row-start-1">
+  <div class="lg:col-span-2 lg:row-span-5 lg:col-start-6 lg:row-start-1 "> 
     <ServiceContent service={services[3]} />
   </div>
   
   <!-- Servicio 5 -->
-  <div class="lg:col-span-3 lg:row-span-3 lg:col-start-5 lg:row-start-6">
+  <div class="cols-span-2 lg:col-span-3 lg:row-span-5 lg:col-start-5 lg:row-start-6 ">
     <ServiceContent service={services[4]} />
   </div>
 </div>

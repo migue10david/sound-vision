@@ -10,26 +10,38 @@ type Props = {
 const { service } = Astro.props;
 ---
 
-<div 
-  class="h-full w-full p-6 border border-gray-200 flex flex-col bg-cover bg-center bg-no-repeat"
-  style={`background-image: url('${service.image}');`}
+<div
+  class="h-full w-full flex flex-col overflow-hidden shadow-xl transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl bg-white"
 >
-  <!-- Capa de oscurecimiento sutil para mejor legibilidad -->
-  <div class="h-full w-full bg-black/10  flex flex-col p-5 justify-center items-center gap-4">
-    <h3 class="text-2xl font-bold text-white mb-3 drop-shadow-md">{service.title}</h3>
-    
-    <!-- Descripción truncada a 3 líneas -->
-    <p 
-      class="text-gray-100 text-xl leading-relaxed  overflow-hidden line-clamp-4 font-bold"
-      style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;"
+  <div
+    class="relative w-full flex-grow min-h-[150px] max-h-[75%] bg-cover bg-center bg-no-repeat group" 
+    style={`background-image: url('${service.image}');`}
+  >
+    <div
+      class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"
+    ></div>
+
+    <div class="absolute top-0 left-0 p-4 sm:p-6">
+      <h3
+        class="text-xl lg:text-3xl font-extrabold text-white leading-tight drop-shadow-lg "
+      >
+        {service.title}
+      </h3>
+    </div>
+  </div>
+
+  <div
+    class="flex flex-col p-4 sm:p-6 justify-between bg-[#f6f6f6]"
+  >
+    <p
+      class="text-gray-700 text-base leading-relaxed overflow-hidden line-clamp-3 mb-4"
     >
       {service.description}
     </p>
 
-    <!-- Botón View More -->
-    <a 
+    <a
       href="/services"
-      class="mt-4 buttonServices"
+      class="buttonServices w-[200px] mx-auto"
     >
       View More
     </a>

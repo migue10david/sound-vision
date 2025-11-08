@@ -30,7 +30,6 @@ const Header = () => {
               <img src="/sound.jpg" alt="Miguelito Logo" className="h-16 w-auto" />
             </a>
           </div>
-
           {/* Menú de Escritorio (visible en pantallas grandes) */}
           <nav className="hidden md:flex space-x-4">
             {navLinks.map((link) => (

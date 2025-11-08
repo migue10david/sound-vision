@@ -3,18 +3,17 @@ interface Props {
   image: string;
   title: string;
   description: string;
-  features?: string[];
   reverse?: boolean; // para alternar el layout en cada card
 }
 
-const { image, title, description, features = [], reverse = false } = Astro.props;
+const { image, title, description, reverse = false } = Astro.props;
 ---
 
 <div class="py-8 md:py-10 ">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class={`grid md:grid-cols-2 gap-8 items-center ${reverse ? 'md:flex-row-reverse' : ''}`}>
+    <div class={`flex flex-col md:flex-row gap-8 items-center ${reverse ? 'md:flex-row-reverse' : ''}`}>
       <!-- Imagen -->
-      <div class=" overflow-hidden shadow-lg">
+      <div class=" overflow-hidden shadow-lg md:w-1/2">
         <img
           src={image}
           alt={title}
@@ -24,31 +23,13 @@ const { image, title, description, features = [], reverse = false } = Astro.prop
       </div>
 
       <!-- Contenido -->
-      <div class="space-y-6">
+      <div class="space-y-6 md:w-1/2">
         <h2 class="text-3xl md:text-4xl font-bold text-[#333333]">{title}</h2>
-        <p class="text-lg text-[#333333] opacity-90 leading-relaxed">{description}</p>
-
-        {features.length > 0 && (
-          <ul class="space-y-3">
-            {features.map((feature) => (
-              <li class="flex items-start">
-                <span class="text-[#990100] mr-2">✓</span>
-                <span class="text-[#333333]">{feature}</span>
-              </li>
-            ))}
-          </ul>
-        )}
-
+        <p class="text-lg text-[#333333] opacity-90 leading-relaxed text-justify">{description}</p>
         <div>
-          <a
-            href="/contact"
-            class="inline-block bg-[#990100] hover:bg-[#b90504] text-white font-medium py-3 px-6 rounded-lg transition-colors shadow-md hover:shadow-lg"
-          >
-            Contact
-          </a>
         </div>
       </div>
     </div>
-    <!-- <div class="h-[0.1px] bg-black w-full mt-4"></div> -->
   </div>
+  <div class="border-t border-gray-300 mt-8 md:mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
 </div>

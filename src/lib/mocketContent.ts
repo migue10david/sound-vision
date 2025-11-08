@@ -2,14 +2,14 @@ export const services = [
   {
     id: 1,
     title:
-      "Technologies Integration, Audio Video Solutions, Security Camera Systems for Residential and Commercial",
+      "Technologies Integration",
     description:
       "With nearly two decades of expertise, Sound Vision 360 Electronics masters the art of technology integration. We don't just install individual components; we design cohesive ecosystems where audio, video, and security work in perfect harmony. For both homes and businesses, we create intelligent environments that are powerful yet simple to control. We partner with the most reputable brands in the industry, ensuring that every system we deliver is built on a foundation of proven reliability and superior performance. Our experience means we foresee challenges and engineer solutions that are not only advanced today but are also scalable for tomorrow.",
     image: "/technologies integration.png"
     },
   {
     id: 2,
-    title: " Home Theaters, Media Rooms, Audio Distribution, Home Networks",
+    title: " Home Theaters",
     description:
       "Since 2005, we have turned ordinary rooms into extraordinary escape. Designing and building home theaters and media rooms is our passion, and our extensive portfolio showcases our deep experience in creating truly cinematic experiences. We go beyond the screen to engineer flawless whole-home audio distribution and robust, high-speed home networks. We select only the finest components—from crystal-clear displays and immersive speakers to enterprise-grade networking gear—ensuring that every movie, song, and video call is delivered with breathtaking clarity and reliability. Trust us to build the nerve center of your connected home.",
   image: "/HOME THEATER SYSTEMS.png"

@@ -1,65 +1,161 @@
 ---
-import { Mail, MapPin, Phone, Facebook, Linkedin, Twitter, Instagram } from "lucide-react"
+import {
+  Mail,
+  MapPin,
+  Phone,
+  Facebook,
+  Linkedin,
+  Twitter,
+  Instagram,
+} from "lucide-react";
 ---
 
-    <footer class="bg-card border-t border-border">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid md:grid-cols-3 gap-12 mb-8">
-          {/* Company Info */}
-          <div>
-            <img src="/sound.jpg" alt="Logo" class="h-16 w-auto" />
-            <p class="text-muted-foreground leading-relaxed">
-            </p>
+<footer class="bg-card border-t border-border">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid md:grid-cols-3 gap-12 mb-8">
+      {/* Company Info */}
+      <div>
+        <img src="/sound.jpg" alt="Logo" class="h-16 w-auto" />
+        <p class="text-muted-foreground leading-relaxed"></p>
+      </div>
+
+      {/* Contact Info */}
+      <div>
+        <h4 class="text-lg font-semibold text-foreground mb-4">Contact</h4>
+        <div class="space-y-3">
+          <div
+            class="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Phone size={18} />
+            <span>+1 (305) 684-2185</span>
           </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 class="text-lg font-semibold text-foreground mb-4">Contact</h4>
-            <div class="space-y-3">
-              <div class="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
-                <Phone size={18} />
-                <span>+1 (305) 684-2185</span>
-              </div>
-              <div class="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
-                <Phone size={18} />
-                <span>+1 (785) 580-0748</span>
-              </div>
-              <div class="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
-                <Mail size={18} />
-                <span>soundvisiondj1@gmail.com</span>
-              </div>
-            </div>
+          <div
+            class="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="18"
+              height="18"
+              viewBox="0 0 64 64"
+            >
+              <path
+                d="M16,22H7a3.00328,3.00328,0,0,1-3-3V18H19v1A3.00328,3.00328,0,0,1,16,22Zm30-3a3.00328,3.00328,0,0,0,3,3h8a3.00328,3.00328,0,0,0,3-3V18H46ZM51.48535,7.437A55.04066,55.04066,0,0,0,32.0498,4c-.0332-.001-.0664-.00049-.10058,0A55.034,55.034,0,0,0,12.51465,7.437C10.51758,8.20557,4,10.95166,4,14v2H19V14.55469C20.21582,13.86816,24.23828,12,32,12c7.84766,0,12.54785,1.91064,14,2.60742V16H60V14C60,10.95166,53.48242,8.20605,51.48535,7.437ZM42,18H38a.99974.99974,0,0,0-1,1v3h6V19A.99974.99974,0,0,0,42,18ZM26,18H22a.99974.99974,0,0,0-1,1v3h6V19A.99974.99974,0,0,0,26,18ZM12,59a.99943.99943,0,0,0,1,1h6a.99943.99943,0,0,0,1-1V58H12Zm32,0a.99943.99943,0,0,0,1,1h6a.99943.99943,0,0,0,1-1V58H44ZM42,40A10,10,0,1,1,32,30,10.01177,10.01177,0,0,1,42,40Zm-7.17188-2.82812a.99967.99967,0,0,0,1.41407,0l1.415-1.415a.9999.9999,0,0,0-1.41407-1.41407l-1.415,1.415A.99962.99962,0,0,0,34.82812,37.17188ZM25,41h2a1,1,0,0,0,0-2H25a1,1,0,0,0,0,2Zm4.17188,1.82812a.99965.99965,0,0,0-1.41407,0l-1.41406,1.415a.99989.99989,0,1,0,1.41406,1.41407l1.41407-1.415A.99969.99969,0,0,0,29.17188,42.82812Zm0-7.07031-1.41407-1.415a.99989.99989,0,0,0-1.41406,1.41407l1.41406,1.415a.9999.9999,0,0,0,1.41407-1.41407ZM33,45a1,1,0,0,0-2,0v2a1,1,0,0,0,2,0Zm0-12a1,1,0,0,0-2,0v2a1,1,0,0,0,2,0Zm4.65723,11.24316-1.415-1.415a.9999.9999,0,0,0-1.41407,1.41407l1.415,1.415a.9999.9999,0,0,0,1.41407-1.41407ZM39,39H37a1,1,0,0,0,0,2h2a1,1,0,0,0,0-2Zm16.958,7.71289A1.0162,1.0162,0,0,1,56,47v6a3.00328,3.00328,0,0,1-3,3H11a3.00328,3.00328,0,0,1-3-3V47a1.0162,1.0162,0,0,1,.042-.28711l6-20C14.71484,24.4707,16.02148,24,17,24H47c1.87793,0,2.58789,1.77539,2.92871,2.62891ZM44,40A12,12,0,1,0,32,52,12.01312,12.01312,0,0,0,44,40Z"
+              ></path>
+            </svg>
+            <span>+1 (785) 580-0748</span>
           </div>
-
-          {/* Social Links */}
-          <div>
-            <h4 class="text-lg font-semibold text-foreground mb-4">Follow us</h4>
-            <div class="flex gap-4">
-              <a
-                href="#"
-                class="w-10 h-10 bg-primary/20 hover:bg-primary/40 rounded-lg flex items-center justify-center text-primary transition-colors"
-                aria-label="Facebook"
-              >
-                <Instagram size={20} />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div class="border-t border-border mb-6" />
-
-        {/* Bottom */}
-        <div class="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>&copy; 2025 SoundVision. All rights reserved.</p>
-          <div class="flex gap-6 mt-4 md:mt-0">
-            <a href="#" class="hover:text-primary transition-colors">
-              PPrivacy Policy
-            </a>
-            <a href="#" class="hover:text-primary transition-colors">
-              Terms of Service
-            </a>
+          <div
+            class="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Mail size={18} />
+            <span>soundvisiondj1@gmail.com</span>
           </div>
         </div>
       </div>
-    </footer>
+
+      {/* Social Links */}
+      <div>
+        <h4 class="text-lg font-semibold text-foreground mb-4">Follow us</h4>
+        <div class="flex gap-4">
+          <a
+            href="#"
+            class="w-10 h-10 rounded-lg flex items-center justify-center text-primary transition-colors"
+            aria-label="Instagram"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="100"
+              height="100"
+              viewBox="0 0 48 48"
+            >
+              <radialGradient
+                id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1"
+                cx="19.38"
+                cy="42.035"
+                r="44.899"
+                gradientUnits="userSpaceOnUse"
+                ><stop offset="0" stop-color="#fd5"></stop><stop
+                  offset=".328"
+                  stop-color="#ff543f"></stop><stop
+                  offset=".348"
+                  stop-color="#fc5245"></stop><stop
+                  offset=".504"
+                  stop-color="#e64771"></stop><stop
+                  offset=".643"
+                  stop-color="#d53e91"></stop><stop
+                  offset=".761"
+                  stop-color="#cc39a4"></stop><stop
+                  offset=".841"
+                  stop-color="#c837ab"></stop></radialGradient
+              ><path
+                fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)"
+                d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
+              ></path><radialGradient
+                id="yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2"
+                cx="11.786"
+                cy="5.54"
+                r="29.813"
+                gradientTransform="matrix(1 0 0 .6663 0 1.849)"
+                gradientUnits="userSpaceOnUse"
+                ><stop offset="0" stop-color="#4168c9"></stop><stop
+                  offset=".999"
+                  stop-color="#4168c9"
+                  stop-opacity="0"></stop></radialGradient
+              ><path
+                fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)"
+                d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
+              ></path><path
+                fill="#fff"
+                d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"
+              ></path><circle cx="31.5" cy="16.5" r="1.5" fill="#fff"
+              ></circle><path
+                fill="#fff"
+                d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="w-10 h-10 rounded-lg flex items-center justify-center text-primary transition-colors"
+            aria-label="Tik Tok"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="100"
+              height="100"
+              viewBox="0 0 50 50"
+            >
+              <path
+                d="M41,4H9C6.243,4,4,6.243,4,9v32c0,2.757,2.243,5,5,5h32c2.757,0,5-2.243,5-5V9C46,6.243,43.757,4,41,4z M37.006,22.323 c-0.227,0.021-0.457,0.035-0.69,0.035c-2.623,0-4.928-1.349-6.269-3.388c0,5.349,0,11.435,0,11.537c0,4.709-3.818,8.527-8.527,8.527 s-8.527-3.818-8.527-8.527s3.818-8.527,8.527-8.527c0.178,0,0.352,0.016,0.527,0.027v4.202c-0.175-0.021-0.347-0.053-0.527-0.053 c-2.404,0-4.352,1.948-4.352,4.352s1.948,4.352,4.352,4.352s4.527-1.894,4.527-4.298c0-0.095,0.042-19.594,0.042-19.594h4.016 c0.378,3.591,3.277,6.425,6.901,6.685V22.323z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    {/* Divider */}
+    <div class="border-t border-border mb-6"></div>
+
+    {/* Bottom */}
+    <div
+      class="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground"
+    >
+      <p>&copy; 2025 SoundVision. All rights reserved.</p>
+      <div class="flex gap-6 mt-4 md:mt-0">
+        <a href="#" class="hover:text-primary transition-colors">
+          PPrivacy Policy
+        </a>
+        <a href="#" class="hover:text-primary transition-colors">
+          Terms of Service
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
