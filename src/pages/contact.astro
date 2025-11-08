@@ -22,16 +22,16 @@ import "../styles/global.css";
       <div class="flex flex-col md:flex-row justify-between gap-12 py-8">
         <!-- 📝 Formulario de contacto -->
         <div class="bg-card p-8 rounded-xl border shadow-sm w-full">
-          <h2 class="text-2xl font-bold text-card-foreground mb-6">Envíanos un mensaje</h2>
-          <form class="space-y-5" action="#" method="POST">
-            <div>
-              <label for="name" class="block text-sm font-medium text-card-foreground mb-1">Nombre</label>
+          <h2 class="text-2xl font-bold text-card-foreground mb-6">Send us a message</h2>
+          <form class="space-y-5 flex flex-col gap-3 justify-center" action="#" method="POST">
+            <div class="flex flex-col gap-3">
+              <label for="name" class="block text-sm font-medium text-card-foreground mb-1">Name</label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 required
-                class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-3 md:py-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="Tu nombre"
               />
             </div>
@@ -42,24 +42,24 @@ import "../styles/global.css";
                 id="email"
                 name="email"
                 required
-                class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-3 md:py-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="tu@email.com"
               />
             </div>
             <div>
-              <label for="message" class="block text-sm font-medium text-card-foreground mb-1">Mensaje</label>
+              <label for="message" class="block text-sm font-medium text-card-foreground mb-1">Message</label>
               <textarea
                 id="message"
                 name="message"
                 required
                 rows="5"
-                class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-3 md:py-5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
             </div>
             <button
               type="submit"
-              class="w-full py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors">
-              Enviar mensaje
+              class="w-full md:mt-10 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors">
+              Send Message
             </button>
           </form>
         </div>
@@ -68,75 +68,129 @@ import "../styles/global.css";
         <div class="space-y-8 w-full">
           <!-- Información de contacto y redes -->
           <div class="bg-card p-8 rounded-xl border shadow-sm">
-            <h2 class="text-2xl font-bold text-card-foreground mb-5">Información de contacto</h2>
+            <h2 class="text-2xl font-bold text-card-foreground mb-5">Contact Info</h2>
 
             <div class="space-y-5">
               <div class="flex items-start gap-4">
-                <div class="mt-1 p-2 bg-primary/10 rounded-lg">
-                  <Phone className="text-primary size-5" />
-                </div>
-                <div>
-                  <h3 class="font-semibold text-card-foreground">Teléfono</h3>
-                  <a href="tel:+34900000000" class="text-muted-foreground hover:text-primary">
-                    +34 900 000 000
-                  </a>
-                </div>
+                <div
+            class="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Phone size={18} />
+            <span>+1 (305) 684-2185</span>
+          </div>
               </div>
 
               <div class="flex items-start gap-4">
-                <div class="mt-1 p-2 bg-primary/10 rounded-lg">
-                  <Mail className="text-primary size-5" />
-                </div>
-                <div>
-                  <h3 class="font-semibold text-card-foreground">Email</h3>
-                  <a href="mailto:info@security.com" class="text-muted-foreground hover:text-primary">
-                    info@security.com
-                  </a>
-                </div>
+                          <div
+            class="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="18"
+              height="18"
+              viewBox="0 0 64 64"
+            >
+              <path
+                d="M16,22H7a3.00328,3.00328,0,0,1-3-3V18H19v1A3.00328,3.00328,0,0,1,16,22Zm30-3a3.00328,3.00328,0,0,0,3,3h8a3.00328,3.00328,0,0,0,3-3V18H46ZM51.48535,7.437A55.04066,55.04066,0,0,0,32.0498,4c-.0332-.001-.0664-.00049-.10058,0A55.034,55.034,0,0,0,12.51465,7.437C10.51758,8.20557,4,10.95166,4,14v2H19V14.55469C20.21582,13.86816,24.23828,12,32,12c7.84766,0,12.54785,1.91064,14,2.60742V16H60V14C60,10.95166,53.48242,8.20605,51.48535,7.437ZM42,18H38a.99974.99974,0,0,0-1,1v3h6V19A.99974.99974,0,0,0,42,18ZM26,18H22a.99974.99974,0,0,0-1,1v3h6V19A.99974.99974,0,0,0,26,18ZM12,59a.99943.99943,0,0,0,1,1h6a.99943.99943,0,0,0,1-1V58H12Zm32,0a.99943.99943,0,0,0,1,1h6a.99943.99943,0,0,0,1-1V58H44ZM42,40A10,10,0,1,1,32,30,10.01177,10.01177,0,0,1,42,40Zm-7.17188-2.82812a.99967.99967,0,0,0,1.41407,0l1.415-1.415a.9999.9999,0,0,0-1.41407-1.41407l-1.415,1.415A.99962.99962,0,0,0,34.82812,37.17188ZM25,41h2a1,1,0,0,0,0-2H25a1,1,0,0,0,0,2Zm4.17188,1.82812a.99965.99965,0,0,0-1.41407,0l-1.41406,1.415a.99989.99989,0,1,0,1.41406,1.41407l1.41407-1.415A.99969.99969,0,0,0,29.17188,42.82812Zm0-7.07031-1.41407-1.415a.99989.99989,0,0,0-1.41406,1.41407l1.41406,1.415a.9999.9999,0,0,0,1.41407-1.41407ZM33,45a1,1,0,0,0-2,0v2a1,1,0,0,0,2,0Zm0-12a1,1,0,0,0-2,0v2a1,1,0,0,0,2,0Zm4.65723,11.24316-1.415-1.415a.9999.9999,0,0,0-1.41407,1.41407l1.415,1.415a.9999.9999,0,0,0,1.41407-1.41407ZM39,39H37a1,1,0,0,0,0,2h2a1,1,0,0,0,0-2Zm16.958,7.71289A1.0162,1.0162,0,0,1,56,47v6a3.00328,3.00328,0,0,1-3,3H11a3.00328,3.00328,0,0,1-3-3V47a1.0162,1.0162,0,0,1,.042-.28711l6-20C14.71484,24.4707,16.02148,24,17,24H47c1.87793,0,2.58789,1.77539,2.92871,2.62891ZM44,40A12,12,0,1,0,32,52,12.01312,12.01312,0,0,0,44,40Z"
+              ></path>
+            </svg>
+            <span>+1 (785) 580-0748</span>
+          </div>
               </div>
 
               <div class="flex items-start gap-4">
-                <div class="mt-1 p-2 bg-primary/10 rounded-lg">
-                  <MapPin className="text-primary size-5" />
-                </div>
-                <div>
-                  <h3 class="font-semibold text-card-foreground">Dirección</h3>
-                  <p class="text-muted-foreground">
-                    Calle Principal 123<br />
-                    28001 Madrid, España
-                  </p>
-                </div>
+               <div
+            class="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Mail size={18} />
+            <span>soundvisiondj1@gmail.com</span>
+          </div>
               </div>
             </div>
 
             <!-- Redes sociales -->
             <div class="mt-8 pt-6 border-t border-border">
-              <h3 class="font-semibold text-card-foreground mb-4">Síguenos</h3>
+              <h3 class="font-semibold text-card-foreground mb-4">Follow us</h3>
               <div class="flex gap-4">
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                  class="p-2.5 bg-primary/10 rounded-lg hover:bg-primary/20 transition-colors">
-                  <Facebook className="size-5 text-primary" />
-                </a>
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  class="p-2.5 bg-primary/10 rounded-lg hover:bg-primary/20 transition-colors">
-                  <Instagram className="size-5 text-primary" />
-                </a>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  class="p-2.5 bg-primary/10 rounded-lg hover:bg-primary/20 transition-colors">
-                  <Linkedin className="size-5 text-primary" />
-                </a>
+                    <a
+            href="#"
+            class="w-10 h-10 rounded-lg flex items-center justify-center text-primary transition-colors"
+            aria-label="Instagram"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="100"
+              height="100"
+              viewBox="0 0 48 48"
+            >
+              <radialGradient
+                id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1"
+                cx="19.38"
+                cy="42.035"
+                r="44.899"
+                gradientUnits="userSpaceOnUse"
+                ><stop offset="0" stop-color="#fd5"></stop><stop
+                  offset=".328"
+                  stop-color="#ff543f"></stop><stop
+                  offset=".348"
+                  stop-color="#fc5245"></stop><stop
+                  offset=".504"
+                  stop-color="#e64771"></stop><stop
+                  offset=".643"
+                  stop-color="#d53e91"></stop><stop
+                  offset=".761"
+                  stop-color="#cc39a4"></stop><stop
+                  offset=".841"
+                  stop-color="#c837ab"></stop></radialGradient
+              ><path
+                fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)"
+                d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
+              ></path><radialGradient
+                id="yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2"
+                cx="11.786"
+                cy="5.54"
+                r="29.813"
+                gradientTransform="matrix(1 0 0 .6663 0 1.849)"
+                gradientUnits="userSpaceOnUse"
+                ><stop offset="0" stop-color="#4168c9"></stop><stop
+                  offset=".999"
+                  stop-color="#4168c9"
+                  stop-opacity="0"></stop></radialGradient
+              ><path
+                fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)"
+                d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
+              ></path><path
+                fill="#fff"
+                d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"
+              ></path><circle cx="31.5" cy="16.5" r="1.5" fill="#fff"
+              ></circle><path
+                fill="#fff"
+                d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="w-10 h-10 rounded-lg flex items-center justify-center text-primary transition-colors"
+            aria-label="Tik Tok"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="100"
+              height="100"
+              viewBox="0 0 50 50"
+            >
+              <path
+                d="M41,4H9C6.243,4,4,6.243,4,9v32c0,2.757,2.243,5,5,5h32c2.757,0,5-2.243,5-5V9C46,6.243,43.757,4,41,4z M37.006,22.323 c-0.227,0.021-0.457,0.035-0.69,0.035c-2.623,0-4.928-1.349-6.269-3.388c0,5.349,0,11.435,0,11.537c0,4.709-3.818,8.527-8.527,8.527 s-8.527-3.818-8.527-8.527s3.818-8.527,8.527-8.527c0.178,0,0.352,0.016,0.527,0.027v4.202c-0.175-0.021-0.347-0.053-0.527-0.053 c-2.404,0-4.352,1.948-4.352,4.352s1.948,4.352,4.352,4.352s4.527-1.894,4.527-4.298c0-0.095,0.042-19.594,0.042-19.594h4.016 c0.378,3.591,3.277,6.425,6.901,6.685V22.323z"
+              ></path>
+            </svg>
+          </a>
               </div>
             </div>
           </div>
@@ -144,13 +198,14 @@ import "../styles/global.css";
           <!-- Mapa de Google -->
           <div class="bg-card rounded-xl border overflow-hidden shadow-sm h-80">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.265098174949!2d-3.7037901999999995!3d40.4167754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sPuerta%20del%20Sol!5e0!3m2!1ses!2ses!4v1234567890"
-              width="100%"
-              height="100%"
-              style="border:0;"
-              loading="lazy"
-              allowfullscreen
-              aria-hidden="true"></iframe>
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3588.57776198582!2d-80.19365142430219!3d25.761679877397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b6a8e713c7a9%3A0xc4e35282e514d26!2sMiami%2C%20FL%2C%20USA!5e0!3m2!1sen!2sus!4v1710000000000"
+  width="100%"
+  height="100%"
+  style="border:0;"
+  loading="lazy"
+  allowfullscreen
+  aria-hidden="true">
+</iframe>
           </div>
         </div>
       </div>

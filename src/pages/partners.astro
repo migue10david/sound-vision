@@ -1,0 +1,45 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import "../styles/global.css";
+---
+
+<Layout title="Our Technology Partners">
+  <div class="min-h-screen bg-background py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <!-- Hero -->
+      <div class="text-center mb-16">
+        <h1 class="text-3xl md:text-4xl font-bold text-foreground">Our Trusted Partners</h1>
+        <p class="text-muted-foreground mt-4 max-w-2xl mx-auto">
+          We integrate cutting-edge security solutions from the world’s leading technology providers.
+        </p>
+      </div>
+
+      <!-- Partners Grid -->
+      <div class="grid md:grid-cols-2 gap-12 lg:gap-16">
+        <!-- Hikvision -->
+        <div class="bg-card rounded-2xl border p-8 shadow-sm flex flex-col h-full hover:shadow-md transition-shadow">
+          <div class="mb-6">
+            <img src="/hinkvision.png" alt="Hikvision Logo" class="h-16 w-auto" />
+            <div class="h-0.5 w-16 bg-primary mb-4"></div>
+          </div>
+          <p class="text-muted-foreground leading-relaxed flex-grow">
+            A global leader in IoT and AI-powered video surveillance, Hikvision delivers innovative, reliable, and high-performance security solutions for homes, businesses, and critical infrastructure worldwide. Their smart cameras, NVRs, and analytics platforms set the industry standard for intelligent security.
+          </p>
+        </div>
+
+        <!-- Uniview -->
+        <div class="bg-card rounded-2xl border p-8 shadow-sm flex flex-col h-full hover:shadow-md transition-shadow">
+          <div class="mb-6">
+              <img src="/uniview.png" alt="Uniview Logo" class="h-16 w-auto" />
+            <div class="h-0.5 w-16 bg-primary mb-4"></div>
+          </div>
+          <p class="text-muted-foreground leading-relaxed flex-grow">
+            Uniview is a top-tier provider of AI-driven video surveillance and smart security systems. Known for its high-quality hardware, advanced deep learning algorithms, and robust cybersecurity standards, Uniview empowers organizations with scalable, future-ready solutions that ensure safety without compromising privacy.
+          </p>
+        </div>
+      </div>
+
+      <!-- CTA Section (opcional) -->
+    </div>
+  </div>
+</Layout>
